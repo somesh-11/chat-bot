@@ -1,0 +1,133 @@
+:root {
+  --bg: #0f172a;
+  --container: #1e293b;
+  --header: #3b82f6;
+  --text: white;
+  --input: white;
+  --message: #3b82f6;
+}
+
+.light-mode {
+  --bg: #f1f5f9;
+  --container: white;
+  --header: #2563eb;
+  --text: black;
+  --input: #e2e8f0;
+  --message: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  transition: 0.3s;
+}
+
+.chat-container {
+  width: 420px;
+  height: 650px;
+  background: var(--container);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.chat-header {
+  background: var(--header);
+  color: white;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.chat-header button {
+  border: none;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.username-area {
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+}
+
+.username-area input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.message {
+  background: var(--message);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  width: fit-content;
+  max-width: 80%;
+}
+
+.username {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.typing {
+  height: 20px;
+  padding-left: 15px;
+  color: gray;
+  font-size: 14px;
+  display: none;
+}
+
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(0,0,0,0.2);
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.input-area button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--header);
+  color: white;
+}
+
+.emoji-btn {
+  font-size: 18px;
+}
